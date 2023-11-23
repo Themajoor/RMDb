@@ -1,0 +1,218 @@
+a {
+  color: black;
+}
+header {
+  width: 100%;
+  z-index: 100;
+  opacity: 0.9;
+  overflow: hidden;
+}
+header nav {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+header nav button {
+  padding: 5px;
+  border-radius: 10px;
+}
+header nav button:hover {
+  background-color: rgba(204, 204, 204, 0.384);
+}
+header nav button:focus {
+  opacity: 0.5;
+  background-color: rgba(204, 204, 204, 0.384);
+}
+main {
+  padding: 10px 50px;
+  text-align: center;
+  width: 100%;
+}
+main h1 {
+  margin: 0 0 13px;
+  background: linear-gradient(
+    140deg,
+    rgb(65, 127, 150),
+    rgba(103, 200, 150, 1)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: beating 2s infinite;
+  font-size: 100px;
+}
+@keyframes beating {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+/*----------------------------------------------- details ----------------------------------------------*/
+.details-section {
+  padding: 30px 0;
+}
+.movie-details {
+  padding-right: 10px;
+  padding-top: 50px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 90%;
+  margin: 0 auto 0;
+  display: flex;
+  gap: 20px;
+  color: rgba(255, 255, 255, 0.804);
+  text-align: left;
+}
+.movie-details h1,
+.movie-details p,
+.movie-details h2 {
+  margin: 0;
+  color: white;
+  border-bottom: none;
+}
+.movie-details small {
+  font-family: cursive;
+}
+.movie-details img {
+  border-radius: 20px;
+  width: 35%;
+  opacity: 0.8;
+}
+.details-text {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.details-miscellenous {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.details-miscellenous p {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+/*------------------------------------------- casts -------------------------------------------*/
+
+.casts-section {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #ccc;
+  color: rgb(52, 52, 52);
+}
+.casts {
+  width: 100%;
+  padding: 40px 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+.cast-profile-card {
+  width: 100%;
+  padding: 10px;
+}
+.cast-profile-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+.cast-profile-card small {
+  font-family: cursive;
+  font-size: 18px;
+}
+.cast-profile-card h1 {
+  font-family: "Pacifico", cursive;
+  margin: 0;
+  text-decoration: underline;
+}
+@media screen and (max-width: 868px) {
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 10px 30px;
+  }
+  .loader {
+    width: 80px;
+    height: 80px;
+  }
+  header {
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  header a {
+    margin-right: 0;
+  }
+  header nav {
+    gap: 15px;
+  }
+
+  button nav button {
+    margin: 5px;
+    font-size: 20px;
+  }
+  .details-section {
+    width: 100%;
+    padding: 20px;
+  }
+  .movie-details {
+    flex-direction: column;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .movie-details img {
+    width: 100%;
+  }
+  .casts {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    overflow-x: auto;
+    margin: auto;
+    padding: 10px 30px;
+  }
+  .casts::-webkit-scrollbar {
+    height: 0.4em;
+  }
+  .casts::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+  }
+  .casts::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .cast-profile-card img {
+    width: 100px;
+    height: 100px;
+  }
+}

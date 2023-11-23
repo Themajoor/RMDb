@@ -1,0 +1,45 @@
+.loader-container {
+  max-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 30px 0;
+}
+.loader-container::-webkit-scrollbar {
+  background-color: transparent;
+  height: 0;
+}
+.loader-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.loader-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.loader-box {
+  min-width: 200px;
+  height: 300px;
+  background-color: rgb(204, 204, 204);
+  border-radius: 20px;
+  animation: pulser 1s infinite;
+}
+
+@keyframes pulser {
+  0% {
+    background-color: rgb(204, 204, 204);
+  }
+  50% {
+    background-color: rgb(83, 83, 83);
+  }
+  100% {
+    background-color: rgb(204, 204, 204);
+  }
+}
+
+@media (max-width: 700px) {
+  .loader-box {
+    min-width: 150px;
+    height: 200px;
+  }
+}

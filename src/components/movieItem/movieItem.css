@@ -1,0 +1,20 @@
+.movie-item {
+  padding: 5px;
+  min-width: 200px;
+  max-width: 200px;
+  gap: 6px;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.movie-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .movie-item {
+    min-width: 150px;
+  }
+}
